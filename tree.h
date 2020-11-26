@@ -17,11 +17,11 @@ class tree{
   tree();
   ~tree();
   void build(node*); 
-  void infix();
-  void postfix();
+  void infix(node*);
+  void postfix(node*);
   void prefix(node*);
-  void push(node*);
-  node* pop();
+  void push2(node*);
+  node* pop2();
   node* getHead();
 private:
   node* head = NULL; //for stack 

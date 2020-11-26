@@ -40,13 +40,12 @@ int main(){
     //gets prefix, infix, or postfix, and calls the corresponding function
     if(strcmp("prefix", in) == 0){
       t->prefix(t->getHead());
-      cout << endl;
     }
     else if(strcmp("infix", in)==0){
-      t->infix();
+      t->infix(t->getHead());
     }
     else if(strcmp("postfix", in)==0){
-      t->postfix();
+      t->postfix(t->getHead());
     }
     else if(strcmp("quit", in)==0){
       return 0; 
