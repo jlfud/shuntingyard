@@ -20,8 +20,8 @@ class tree{
   void infix(node*);
   void postfix(node*);
   void prefix(node*);
-  void push2(node*);
-  node* pop2();
+  void push(node*);
+  node* pop();
   node* getHead();
 private:
   node* head = NULL; //for stack 

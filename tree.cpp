@@ -16,33 +16,47 @@ void tree::build(node* qhead){
   while(current != NULL){
     //copy of current without link
     node* placeholder = current;
+    node* temp = current->next; 
     placeholder->next = NULL; 
     if(current->precedence == 0){
-      this->push2(placeholder); //push if it is an operand
+      this->push(placeholder); //push if it is an operand
     }
     else{
-      placeholder->left = this->pop2(); //pop for left
-      placeholder->right = this->pop2(); //pop for right
-      this->push2(placeholder); //push the tree
+      placeholder->left = this->pop(); //pop for left
+      placeholder->right = this->pop(); //pop for right
+      this->push(placeholder); //push the tree
     }
-    current = current->next;
+    current = temp; 
   }
 }
 void tree::infix(node* current){
-  
+  if(current != NULL){
+    if(current->precedence != 0){
+      cout << "( "; 
+    }
+    infix(current->left);
+    cout << current->data << " ";
+    infix(current->right);
+    if(current->precedence != 0){
+      cout << ") ";
+    }
+  }
 }
 void tree::postfix(node* current){
-
+  if(current != NULL){
+    postfix(current->left);
+    postfix(current->right);
+    cout << current->data << " "; 
+  }
 }
 void tree::prefix(node* current){
-  cout << "here" << endl;
   if(current != NULL){
     cout << current->data << " "; 
     this->prefix(current->left);
     this->prefix(current->right);
   }
 }
-void tree::push2(node* n){
+void tree::push(node* n){
   //general push function for generic stack
   if(head == NULL){
     head = n; 
@@ -52,7 +66,7 @@ void tree::push2(node* n){
     head = n; 
   }
 }
-node* tree::pop2(){
+node* tree::pop(){
   if(head == NULL){
     return NULL; 
   }
