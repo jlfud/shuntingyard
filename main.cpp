@@ -10,7 +10,7 @@ int main(){
   char in[100]; //for input
   list* l = new list(); //list contains stack and queue
   //push pushes to l's stack, enqueue queues to l's queue 
-  cout << "enter your expression separated by spaces: " << endl;
+  cout << "enter your expression without spaces: " << endl;
   cin >> in;
   cout << endl;
   for(int i = 0; i < strlen(in); i++){
