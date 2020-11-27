@@ -22,8 +22,8 @@ void tree::build(node* qhead){
       this->push(placeholder); //push if it is an operand
     }
     else{
-      placeholder->left = this->pop(); //pop for left
-      placeholder->right = this->pop(); //pop for right
+      placeholder->right= this->pop(); //pop for left
+      placeholder->left = this->pop(); //pop for right
       this->push(placeholder); //push the tree
     }
     current = temp; 
