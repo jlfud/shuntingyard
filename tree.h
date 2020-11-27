@@ -20,6 +20,7 @@ class tree{
   void infix(node*);
   void postfix(node*);
   void prefix(node*);
+  //more generic push function for the tree
   void push(node*);
   node* pop();
   node* getHead();

@@ -10,7 +10,7 @@ list::list(){
   shead = NULL; //stack head
 }
 list::~list(){
-  
+
 }
 void list::push(node* n){
   //give operator precedence

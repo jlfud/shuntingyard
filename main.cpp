@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cstring>
 #include <cctype>
-#include "tree.h"
+#include "tree.h" //includes node struct
 #include "list.h"
 
 using namespace std;
@@ -55,5 +55,6 @@ int main(){
     }
     cout << endl;
   }
+  return 0;
 }
 

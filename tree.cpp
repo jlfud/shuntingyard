@@ -29,6 +29,7 @@ void tree::build(node* qhead){
     current = temp; 
   }
 }
+//different algorithms for binary expression tree
 void tree::infix(node* current){
   if(current != NULL){
     if(current->precedence != 0){

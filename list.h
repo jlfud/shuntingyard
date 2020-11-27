@@ -11,6 +11,8 @@ class list{
 public:
   list();
   ~list();
+  //push function has been specialized to include
+  //shunting yard algorithm
   void push(node* n);
   node* pop();
   node* peek();
