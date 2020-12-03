@@ -41,7 +41,7 @@ void list::push(node* n){
   //if not paranthases
   if(n->precedence != 4){
     while(shead != NULL){ 
-      if(shead->precedence > n->precedence && shead->precedence != 4){
+      if((shead->precedence > n->precedence || (shead->precedence == n->precedence && n->precedence != 3))&& shead->precedence != 4){
 	//queue the popped node
 	this->enqueue(this->pop());
       }
